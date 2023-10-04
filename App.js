@@ -100,9 +100,11 @@ export default function App() {
     });
     setQuestions(shuffledQuestions);
   }
+
+  const showIntro = !showQuestions && !showAnswers;
   return (
     <div>
-      {!showQuestions && !showAnswers && (
+      {showIntro && (
         <Intro
           handleStartQuizClick={handleStartQuizClick}
           setTopic={setTopic}
