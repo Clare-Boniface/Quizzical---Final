@@ -27,7 +27,7 @@ export default function App() {
 
   // Initialize the selectedAnswers array with null values for each question
   useEffect(() => {
-    setSelectedAnswers(new Array(questions.length).fill(null));
+    setSelectedAnswers(Array.from({ length: questions.length }));
   }, [questions]);
 
   function fetchQuestions(selectedCategory) {
